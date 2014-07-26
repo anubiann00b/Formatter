@@ -9,6 +9,7 @@ import java.io.IOException;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.apache.poi.xwpf.usermodel.XWPFStyles;
 
 /**
  * Usage:
@@ -41,6 +42,11 @@ public class Formatter {
         }
         
         XWPFDocument document = new XWPFDocument();
+        
+        XWPFStyles styles = document.createStyles();
+        //CTStyle s = new CTStyle();
+        //XWPFStyle style = new XWPFStyle();
+        //styles.addStyle(null);
         
         String line;
         while ((line = reader.readLine()) != null) {
